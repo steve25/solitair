@@ -5,13 +5,15 @@ import pygame
 FPS = 60
 
 WINDOW = pygame.display.set_mode((WIDTH, HEIGHT))
-pygame.display.set_caption('Solitaire')
+pygame.display.set_caption("Solitaire")
+
 
 def get_position_from_mouse(pos):
-    x,y = pos
+    x, y = pos
     row = (y - BOARD_PADDING) // SQUARE_SIZE
     col = (x - BOARD_PADDING) // SQUARE_SIZE
     return row, col
+
 
 def main():
     run = True
@@ -31,5 +33,6 @@ def main():
         game.update()
 
     pygame.quit()
+
 
 main()
